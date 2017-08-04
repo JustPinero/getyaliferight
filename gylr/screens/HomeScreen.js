@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import Bananas from '../components/Bananas'
+
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
@@ -18,7 +18,6 @@ export default class HomeScreen extends React.Component {
   };
 
   render() {
-    console.log( "this is working")
     return (
       <View style={styles.container}>
         <ScrollView
@@ -34,10 +33,11 @@ export default class HomeScreen extends React.Component {
               style={styles.welcomeImage}
             />
           </View>
+
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>HIYA HOW YA DOING?!</Text>
+            <Text style={styles.getStartedText}>Get started by opening</Text>
 
             <View
               style={[
@@ -48,7 +48,7 @@ export default class HomeScreen extends React.Component {
                 screens/HomeScreen.js
               </MonoText>
             </View>
-            <Bananas/>
+
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
             </Text>
